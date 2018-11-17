@@ -6,6 +6,8 @@ namespace DataX
     {
         public int Count { get; set; }
 
+        public bool AcceptDuplicates { get; set; }
+
         private BinarySearchTreeNode<T> Root { get; set; }
 
         public BinarySearchTree() { Root = null; Count = 0; }
@@ -21,14 +23,19 @@ namespace DataX
                 return true;
             }
             else
-                return Root.Insert(dataToInsert);
+                return Root.Insert(dataToInsert,AcceptDuplicates);
         }
-        public void Print()
+        public string Print()
         {
             if (Root == null)                           
-                return;            
+                return "";
             else
-                Root.Print();
+            {
+                var result = Root.Print();
+                Console.Write(result);
+                return result;
+            }
+                
         }
 
 
