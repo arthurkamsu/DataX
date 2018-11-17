@@ -20,10 +20,18 @@ namespace DataX
             if (Root == null)
             {
                 Root = new BinarySearchTreeNode<T>(dataToInsert);
+                Count++;
                 return true;
             }
             else
-                return Root.Insert(dataToInsert,AcceptDuplicates);
+            {
+                if (Root.Insert(dataToInsert, AcceptDuplicates))
+                {
+                    Count++;
+                    return true;
+                }
+                else return false;
+            } 
         }
         public string Print()
         {

@@ -58,5 +58,19 @@ namespace XUnitTestDataX
             Assert.Equal("-4 2 3 5 18", tree.Print());
 
         }
+
+        [Fact]
+        public void TestCounyTree()
+        {
+            BinarySearchTree<int> tree = new BinarySearchTree<int>();
+
+            tree.Insert(18);
+            tree.Insert(-4);
+            tree.Insert(3);
+            tree.Insert(2);
+            tree.Insert(5);
+
+            Assert.Equal(5, tree.Count);
+        }
     }
 }

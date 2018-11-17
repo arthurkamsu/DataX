@@ -32,7 +32,7 @@ namespace DataX
                 if (Left == null)
                 {
                     Left = new BinarySearchTreeNode<T>(DataToInsert);
-                    return true;
+                    return true;                    
                 }
                 else
                     return Left.Insert(DataToInsert, AcceptDuplicates);
