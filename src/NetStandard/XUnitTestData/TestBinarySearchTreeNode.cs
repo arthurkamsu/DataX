@@ -1,21 +1,19 @@
-﻿using System;
+using System;
+using Xunit;
 using DataX;
-
-namespace TestDataX
+namespace XUnitTestData
 {
     public class TestBinarySearchTreeNode
     {
-
-        public static void Main(String[] args)
+        [Fact]
+        public void TestPrintTree()
         {
             /*create the BST*/
             BinarySearchTree<int> tree = new BinarySearchTree<int>();
-
             /*create root*/
             //tree.Root = new BinarySearchTreeNode<int>(1);
             tree.Insert(1);
             /* following is the tree after above statement 
-
                   1 
                 /   \ 
               null  null     */
@@ -32,7 +30,6 @@ namespace TestDataX
               /    \    /  \ 
             null null null null  */
 
-
             //tree.Root.Left.Left = new BinarySearchTreeNode<int>(4);
             tree.Insert(4);
             /* 4 becomes left child of 2 
@@ -44,9 +41,9 @@ namespace TestDataX
                /   \ 
               null null 
              */
-
             tree.Print();
-        }
 
+
+        }
     }
 }

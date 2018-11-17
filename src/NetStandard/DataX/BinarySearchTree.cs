@@ -23,7 +23,13 @@ namespace DataX
             else
                 return Root.Insert(dataToInsert);
         }
-
+        public void Print()
+        {
+            if (Root == null)                           
+                return;            
+            else
+                Root.Print();
+        }
 
 
 

@@ -48,11 +48,16 @@ namespace DataX
             return false;
         }
 
-        /*
-        public string Print()
+        
+        public void Print()
         {
+            if (this == null || Data==null)
+                return;
 
+            if (Left != null) Left.Print();            
+            Console.Write(" " + Data.ToString());
+            if (Right != null)  Right.Print();
         }
-        */
+        
     }
 }
