@@ -63,7 +63,7 @@ namespace XUnitTestDataX
         public void TestCounyTree()
         {
             BinarySearchTree<int> tree = new BinarySearchTree<int>();
-
+            
             tree.Insert(18);
             tree.Insert(-4);
             tree.Insert(3);
